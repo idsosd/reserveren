@@ -65,6 +65,7 @@ if($_SESSION['loggedin'] == 0) {
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>-->
+            <a class="btn btn-dark" href="uitloggen.php">log uit</a>&nbsp;&nbsp;&nbsp;
             <?php echo $_SESSION['user_email'] ?>
         </div>
     </nav>
