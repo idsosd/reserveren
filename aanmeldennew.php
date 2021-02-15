@@ -48,9 +48,9 @@ if(isset($_GET['error']))
                             <label for="wachtwoord1">Wachtwoord</label>
                             <input type="password" class="form-control" id="wachtwoord1" name="wachtwoord1" onkeyup="bepaalSterkte()" required>
                             <div id="wwHelp" class="form-text">8 karakters, 1 kleine letter, 1 hoofdletter, 1 cijfer, 1 vreemd teken.</div>
-                            <div id="wachtwoordsterkte" class="progress" style="height: 20px;">
-                                <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
+                        </div>
+                        <div id="wachtwoordsterkte" class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <div class="mb-3">
                             <label for="wachtwoord2">Herhaal wachtwoord</label>

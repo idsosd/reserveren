@@ -15,6 +15,8 @@ else {
         //de sessievariabele vullen dat je ingelogd bent
         $_SESSION['loggedin'] = 1;
         $_SESSION['user_email'] = $_POST['email'];
+        //de user_id ook opslaan in een sessie-variabele om een apparaat te kunnen reserveren
+        $_SESSION['user_id'] = $dbconnect->haalUseridOp($_POST['email']);
         //ga door naar het deel achter de login
         header("Location: ../achterdeinlog.php");
     } else {

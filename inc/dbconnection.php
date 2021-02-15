@@ -6,7 +6,7 @@ class dbconnection extends PDO //PDO= PHP DATA OBJECT, dit is een bestaand class
     private string $host = "localhost";
     private string $dbname = "reserveren";
     private string $user = "webgebruiker_reserveren";
-    private string $pass = "JjBaRqYe40HhrekO";
+    private string $pass = "VX7jQHWRSRNeQX47";
 
     public function __construct()
     {
@@ -53,6 +53,16 @@ class dbconnection extends PDO //PDO= PHP DATA OBJECT, dit is een bestaand class
         else {
             return "idsisgek";
         }
+    }
+
+    public function haalUseridOp($emailadres): int
+    {
+        $dbconnect = new dbconnection();
+        $sql = "SELECT user_id FROM user WHERE user_email=:mail";
+        $query = $dbconnect -> prepare($sql);
+        $query->bindParam(":mail", $emailadres);
+        $query ->execute();
+        return $query->fetchColumn();
     }
 
     public function verifieerUser($id,$hash)

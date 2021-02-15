@@ -1104,51 +1104,87 @@ ALL PRIVILEGES|webuser\_%
 </ObjectGrants>
     </user>
     <table id="346" parent="11" name="apparaat"/>
-    <table id="347" parent="11" name="user"/>
-    <column id="348" parent="346" name="app_id">
+    <table id="347" parent="11" name="reserveringen"/>
+    <table id="348" parent="11" name="user"/>
+    <column id="349" parent="346" name="app_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="349" parent="346" name="app_naam">
+    <column id="350" parent="346" name="app_naam">
       <Position>2</Position>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="350" parent="346" name="app_plek">
+    <column id="351" parent="346" name="app_plek">
       <Position>3</Position>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="351" parent="346" name="PRIMARY">
+    <key id="352" parent="346" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>app_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="352" parent="347" name="user_id">
+    <column id="353" parent="347" name="res_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="353" parent="347" name="user_email">
+    <column id="354" parent="347" name="res_userid">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="355" parent="347" name="res_appid">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="356" parent="347" name="res_vanaf">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+    </column>
+    <column id="357" parent="347" name="res_tot">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+    </column>
+    <column id="358" parent="347" name="res_tijdstip">
+      <Position>6</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>current_timestamp()</DefaultExpression>
+    </column>
+    <key id="359" parent="347" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>res_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="360" parent="348" name="user_id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="361" parent="348" name="user_email">
       <Position>2</Position>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="354" parent="347" name="user_password">
+    <column id="362" parent="348" name="user_password">
       <Position>3</Position>
       <DataType>varchar(1024)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="355" parent="347" name="user_status">
+    <column id="363" parent="348" name="user_status">
       <Position>4</Position>
       <DataType>tinyint(4)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <key id="356" parent="347" name="PRIMARY">
+    <key id="364" parent="348" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id</ColNames>
       <Primary>1</Primary>
