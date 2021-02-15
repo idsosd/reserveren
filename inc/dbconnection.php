@@ -5,8 +5,8 @@ class dbconnection extends PDO //PDO= PHP DATA OBJECT, dit is een bestaand class
 {
     private string $host = "localhost";
     private string $dbname = "reserveren";
-    private string $user = "webgebruiker_reserveren";
-    private string $pass = "VX7jQHWRSRNeQX47";
+    private string $user = "<hier de gebruikersnaam van je mysql-omgeving>";
+    private string $pass = "<hier je wachtwoord>";
 
     public function __construct()
     {
